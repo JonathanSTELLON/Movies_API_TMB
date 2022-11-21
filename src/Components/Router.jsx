@@ -4,11 +4,17 @@ import List from './List';
 import Header from './Header';
 import Home from './Home';
 import Detail from './Detail';
+import Register from './Register';
+import Login from './Login';
+import Profile from './Profile';
 
 export const MyRoutes = {
     HOME: '/',
     DETAIL: '/:idFilm',
-    SELECTION: '/selection'
+    SELECTION: '/selection',
+    LOGIN: '/login',
+    REGISTER: '/register',
+    PROFILE: '/profile'
 }
 
 export const Selection = {
@@ -28,6 +34,9 @@ const Router = () => {
             <Route path={MyRoutes.HOME} element={<Home />}/>
             <Route path={MyRoutes.DETAIL} element={<Detail />}/>
             <Route path={`${MyRoutes.SELECTION}/:id`} element={<List />}/>
+            <Route path={MyRoutes.LOGIN} element={<Login />}/>
+            <Route path={MyRoutes.REGISTER} element={<Register />}/>
+            <Route path={MyRoutes.PROFILE} element={<Profile />}/>
         </Routes>
     </BrowserRouter>
   )

@@ -52,7 +52,7 @@ h2{
   padding: .7em;
   font-weight: bold;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .linkHome{
@@ -241,6 +241,31 @@ article{
 .homeLink{
   display: flex;
   align-items: center;
+}
+
+.form{
+  padding: 1em;
+}
+
+input{
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  border: white;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 10px;
+  padding: .7em;
+}
+
+label{
+  margin-bottom: .7em;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  padding: .7em;
 }
 
 .lds-spinner {
