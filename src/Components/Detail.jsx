@@ -1,14 +1,17 @@
 import Axios from 'axios';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import TemplateDetail from './TemplateDetail';
+import { AppContext, MyContext } from './../store/AppContext';
 
 const Detail = () => {
 
     const params = useParams(); //donne l'id dern élemn de l'url
 
     const [movie, setMovie] = useState([]);
+
+    const { store, setStore } = useContext(MyContext);
 
     const URL = `https://api.themoviedb.org/3/movie/${params.idFilm}?api_key=00fea5657aa3cb22f4915ca3e8c7b486&language=fr`;
 
@@ -25,7 +28,7 @@ const Detail = () => {
 
   return (
     <>
-        <div>
+        <div className={store.theme === "light" ? "lightTheme" : "darkTheme"}>
             <TemplateDetail 
                 id={movie.id}
                 title={movie.title}

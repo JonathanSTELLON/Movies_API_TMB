@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { MyRoutes, Selection } from './Router';
+import { MyRoutes, Selection } from './Router/Router';
 import marvel from '../img/shield.png';
 import pixar from '../img/lamp.png';
 import blockbuster from '../img/clapperboard(1).png';
 import heart from '../img/heart.png';
 import oscar from '../img/oscar.png';
+import { AppContext, MyContext } from './../store/AppContext';
 
 const Menu = () => {
+
+  const { store, setStore } = useContext(MyContext);
+
   return (
     <div className="homeContainer">
-        <section className="selection">
+     <section className="selection">
           <div className="logoTitle">
             <img className="logoHome" src={pixar}></img>
             <h2 className="titleCat">Pixar</h2>
@@ -19,6 +23,7 @@ const Menu = () => {
               <Link className="linkHome" to={`${MyRoutes.SELECTION}/${Selection.PIXAR}`}>Show more !</Link>
             </div>
         </section>
+      
         <section className="selection">
             <div className="logoTitle">
               <img className="logoHome" src={marvel}></img>

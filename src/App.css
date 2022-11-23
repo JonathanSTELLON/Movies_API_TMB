@@ -1,8 +1,32 @@
 body{
   margin: 0;
-  background-color: white;
   font-family: 'Source Code Pro', monospace;
   overflow-x: hidden;
+}
+
+.lightTheme{
+  background-color: white;
+  padding-bottom: 7em;
+}
+
+.darkTheme{
+  background-color: #162533;
+  /* background-color: #0c243e; */
+  padding-bottom: 7em;
+}
+
+.switchTheme{
+  cursor: pointer;
+  padding-left: 2em;
+}
+
+.switch{
+  width: 30px;
+  height: auto;
+}
+
+.welcome{
+  text-align: right;
 }
 
 h2{
@@ -10,12 +34,22 @@ h2{
   color: #453D83;
 }
 
+
+.icon{
+  width: 20px;
+  height: auto;
+}
+
 .App {
   text-align: center;
 }
 
+.error{
+  color: red;
+}
+
 .header{
-  background-color: white;
+  /* background-color: white; */
   padding: 2em;
   width: 100%;
   margin: 0;
@@ -48,7 +82,7 @@ h2{
 }
 
 .links{
-  color: #453D83;
+  color: #FFC94F;
   padding: .7em;
   font-weight: bold;
   text-decoration: none;
@@ -117,6 +151,8 @@ h2{
   margin: 0 auto;
   margin-top : .5em;
   text-decoration: none;
+  padding: .7em;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .href{
@@ -156,7 +192,7 @@ h2{
 
 article{
   margin: 0 auto;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   width: 60%;
   display: flex;
   flex-direction: row;
@@ -220,7 +256,6 @@ article{
   padding: 1.2em;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  background-color: white;
 }
 
 .titleCat{
@@ -248,7 +283,7 @@ article{
 }
 
 input{
-  width: 500px;
+  width: 300px;
   text-align: center;
   margin: 0 auto;
   background-color: white;
@@ -260,6 +295,17 @@ input{
 
 label{
   margin-bottom: .7em;
+  color: #FFC94F;
+}
+
+.profilePic{
+  width: 200px;
+  height: auto;
+}
+
+.profile{
+  padding-bottom: 30em;
+  color: #453D83;
 }
 
 .input{

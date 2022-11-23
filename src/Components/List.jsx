@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Card from './Card';
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { AppContext, MyContext } from './../store/AppContext';
 
 const List = () => {
 
     const params = useParams();
+
+    const { store, setStore } = useContext(MyContext);
 
     const [list, setList] = useState([]);
 
@@ -24,7 +27,8 @@ const List = () => {
     }, [params.id])
 
   return (
-    <div className="container">
+    <div className={store.theme === "light" ? "lightTheme" : "darkTheme"}>
+        <div className="container">
         {list.length > 0 ?
             <>
                 {list.map((element, index) =>
@@ -42,6 +46,8 @@ const List = () => {
         <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         }
     </div>
+    </div>
+    
   )
 }
 
