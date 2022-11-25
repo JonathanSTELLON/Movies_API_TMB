@@ -7,6 +7,8 @@ import login from './../img/login.png';
 import users from './../img/users.png';
 import moon from './../img/half-moon.png';
 import sun from './../img/sun.png';
+import night from './../img/night.png';
+import day from './../img/day.png';
 import home from './../img/home.png';
 import avatar from './../img/avatar.png';
 import logout from './../img/logout.png';
@@ -38,9 +40,9 @@ const Header = (props) => {
             <Link className="links" to={MyRoutes.PROFILE}><img src={avatar} className="icon"></img> <div className="textMenu">Mon profil</div></Link>
             <Logout/>
             {store.theme === "light" ?
-              <div className="switchTheme" onClick={changeTheme}><img src={moon} className="switch"></img></div>
+              <div className="switchTheme" onClick={changeTheme}><img src={night} className="switch"></img></div>
               :
-              <div className="switchTheme" onClick={changeTheme}><img src={sun} className="switch"></img></div>
+              <div className="switchTheme" onClick={changeTheme}><img src={day} className="switch"></img></div>
             }
           </>
           :
