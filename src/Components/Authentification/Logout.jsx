@@ -15,7 +15,7 @@ const Logout = () => {
 
   return (
     <>
-        <Link className="links" onClick={logout}><img src={logmeout} className="icon"></img> Se deconnecter</Link>
+        <Link className="links" onClick={logout}><img src={logmeout} className="icon"></img> <div className="textMenu"> Se deconnecter</div></Link>
     </>
   )
 }

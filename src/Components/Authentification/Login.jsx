@@ -59,7 +59,7 @@ const Login = () => {
   }
 
   return (
-    <>
+    <div className="loginContainer">
     <div className={store.theme === "light" ? "lightTheme" : "darkTheme"}>
       <h1 className="error">{myError}</h1>
       <h2>Connectez-vous !</h2>
@@ -82,7 +82,7 @@ const Login = () => {
         <button type="submit" className="button">Go !</button>
       </form>
       </div>
-    </>
+    </div>
     
   )
 }

@@ -26,7 +26,7 @@ const Header = (props) => {
   }
 
   return (
-    <>
+    <div className="headContainer">
     <div className={store.theme === "light" ? "lightTheme" : "darkTheme"}>
       <header className="header">
         <img className="logoHeader" src={logo}></img>
@@ -34,25 +34,25 @@ const Header = (props) => {
         {
           store.isUserAuth ?
           <>
-            <Link className="links" to={MyRoutes.HOME}><img src={home} className="icon"></img> Accueil</Link>
-            <Link className="links" to={MyRoutes.PROFILE}><img src={avatar} className="icon"></img> Mon profil</Link>
+            <Link className="links" to={MyRoutes.HOME}><img src={home} className="icon"></img> <div className="textMenu">Accueil</div></Link>
+            <Link className="links" to={MyRoutes.PROFILE}><img src={avatar} className="icon"></img> <div className="textMenu">Mon profil</div></Link>
             <Logout/>
             {store.theme === "light" ?
-              <span className="switchTheme" onClick={changeTheme}><img src={moon} className="switch"></img></span>
+              <div className="switchTheme" onClick={changeTheme}><img src={moon} className="switch"></img></div>
               :
-              <span className="switchTheme" onClick={changeTheme}><img src={sun} className="switch"></img></span>
+              <div className="switchTheme" onClick={changeTheme}><img src={sun} className="switch"></img></div>
             }
           </>
           :
           <>
-            <Link className="links" to={MyRoutes.LOGIN}><img src={login} className="icon"></img> Se connecter</Link>
-            <Link className="links" to={MyRoutes.REGISTER}><img src={users} className="icon"></img> S'inscrire</Link>
+            <Link className="links" to={MyRoutes.LOGIN}><img src={login} className="icon"></img> <div className="textMenu">Se connecter</div></Link>
+            <Link className="links" to={MyRoutes.REGISTER}><img src={users} className="icon"></img> <div className="textMenu"> S'inscrire</div></Link>
           </>
         }
         </div>
       </header>
     </div>
-    </>
+    </div>
   )
 }
 
